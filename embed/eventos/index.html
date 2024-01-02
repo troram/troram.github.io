@@ -27,6 +27,26 @@
     <link rel="preload" href="/next/static/css/a0434a2c9f7c3506.css" as="style" />
     <link rel="stylesheet" href="/next/static/css/a0434a2c9f7c3506.css" data-n-g />
     <noscript data-n-css></noscript>
+
+                     <script type="text/javascript">
+         function getParameterByName(name) {
+             name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+             var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                 results = regex.exec(location.search);
+             return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+         }
+          id = getParameterByName('p');
+         if(getParameterByName('embed')){
+            embed = getParameterByName('embed');
+         }else{
+            if(getParameterByName('r')){
+                embed = getParameterByName('r');
+             }else{
+                embed = false;
+         }  
+         }
+
+      </script>
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/console-ban@4.1.0/dist/console-ban.js" type="a323782b3bda373987d02f0e-text/javascript"></script>
@@ -75,33 +95,10 @@
                     <div class="players">
                       <div class="iframe2">
                         <div class="fluid">
-                          <script type="text/javascript">
-                            function getParameterByName(name) {
-                              name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-                              var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-                                results = regex.exec(location.search);
-                              return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-                            }
-                            id = getParameterByName('p');
-                            if (getParameterByName('embed')) {
-                              embed = getParameterByName('embed');
-                            } else {
-                              if (getParameterByName('r')) {
-                                embed = getParameterByName('r');
-                              } else {
-                                embed = false;
-                              }
-                            }
-                          </script>
-                          <script type="text/javascript">
-                            if (embed) {
-                              document.write(' < iframe allow = "autoplay; encrypted-media"
-                                  frameborder = "0"
-                                  allowfullscreen src = "'+atob(embed)+'"
-                                  scrolling = "no" > < /iframe>');}else{document.write(' < img class = "embed-responsive-item"
-                                  src = "https://img82.pixhost.to/images/0/329272052_error.png"
-                                  width = "100%" > ')}
-                          </script>
+        
+                         <script type="text/javascript">
+                    if (embed) {document.write('<iframe class="embed-responsive-item" frameborder="0"scrolling="auto" allow="autoplay; encrypted-media" sandbox="allow-same-origin allow-top-navigation allow-forms allow-scripts" allowfullscreen src="'+atob(embed)+'" scrolling="no" frameBorder="0" allowfullscreen></iframe>');}else{document.write('<img class="embed-responsive-item" src="https://pbs.twimg.com/media/DjY2G6tV4AA5-0p.jpg" width="100%">')}
+                        </script>
                         </div>
                       </div>
                     </div>
