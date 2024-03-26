@@ -51,7 +51,7 @@ function eventos()
 	var x = Math.random().toString(36).substring(7);
 
 	$.ajax({
-		url : "eventos.json?"+x,
+		url : "https://librefutboltv.net/star-plus/eventos.json?"+x,
 		type : "get",
 		success: function (arr) {
 			var content = '';
