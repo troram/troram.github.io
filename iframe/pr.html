@@ -43,7 +43,26 @@
       <link rel="preload" href="/next/static/css/a0434a2c9f7c3506.css" as="style" />
       <link rel="stylesheet" href="/next/static/css/a0434a2c9f7c3506.css"/>
  
-  </head>
+
+ 
+     <style>
+            .star-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffcc00; 
+            color: #000; 
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .star-icon::before {
+            content: '\2605'; 
+            margin-right: 5px;
+        }
+  </style>  </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/console-ban@4.1.0/dist/console-ban.min.js" type="ac1246787068f2615875727d-text/javascript"></script>
     <div id="__next">
@@ -53,15 +72,13 @@
           <main class="page-wrapper">
             <header class="navbar navbar-expand-lg bg-light shadow-sm fixed-top">
               <div class="container">
-                <a href="/" class="navbar-brand">
-                  <img class="dark-mode-img light-logo" src="/assets/football-outline.svg" width="25" alt="futbollibre" />
-                  <img class="light-mode-img dark-logo" src="/assets/football-outline.svg" width="25" alt="futbollibre" />
-                  <span style="font-size:18px">Fútbol Libre</span>
+                <a class="navbar-brand" href="/" aria-label="sfntv">
+                  <img class="a" src="/icono.ico" alt="Logo" data-hs-theme-appearance="dark" style="width: 30px; margin-right: 20px" />
+                  <span class="logo-text">Mega Deportes TV</span>
                 </a>
                 <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse2" aria-expanded="false">
                   <span class="navbar-toggler-icon"></span>
                 </button>
-                <a href="#" class="btn btn-info btn-sm fs-sm rounded order-lg-3 d-none d-lg-inline-flex">Descargar APP</a>
                 <nav id="navbarCollapse2" class="collapse navbar-collapse">
                   <hr class="d-lg-none mt-3 mb-2" />
                   <ul class="navbar-nav me-auto">
@@ -69,10 +86,13 @@
                       <a href="/" class="nav-link">Inicio</a>
                     </li>
                     <li class="nav-item">
-                      <a href="/star-plus/" class="nav-link">STAR+</a>
+                      <a href="/star-plus" class="nav-link">STAR+</a>
                     </li>
                     <li class="nav-item">
-                      <a href="/vix-plus/" class="nav-link">VIX+</a>
+                      <a href="/vix-plus" class="nav-link">VIX+</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="/nba" class="nav-link">NBA League Pass</a>
                     </li>
                   </ul>
                 </nav>
@@ -89,8 +109,11 @@
                 <div class="row">
                   <li class="list-group-item d-flex align-items-center t-l" style="margin-top:20px">
                     <p class="m-auto" style="font-size:20px">
-                      <img src="https://futbollibre.nu/tv2/webp/logos/optimized/starplus.webp" width="80" class="logo1" /> Eventos Deportivos
+                      <img src="/starplus.webp?s" width="80" class="logo1" /> Eventos Deportivos
                     </p>
+                    <a class="star-btn" href="/star-plus-br">
+                  <span class="star-icon"></span> Star+ BR
+                  </a>
                   </li>
                   <ul class="list-group eventos-1" id="eventos">
                     <li class="list-group-item d-flex align-items-center col-12 col-sm-6 col-lg-4 col-xl-3 t-l">
