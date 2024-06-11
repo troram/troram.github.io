@@ -1,0 +1,121 @@
+
+<html lang="es">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<meta name="robots" content="noindex, nofollow" />
+<style type="text/css">
+body {
+   margin: 0;
+   padding: 0;
+}
+</style>
+<script type="text/javascript">
+function getParameterByName(name) {
+	name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
+	var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
+	results = regex.exec(location.search);
+	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+var getURL = getParameterByName('get');
+if (getURL == "#") {alert('Vuelve a la pÃ¡gina anterior');}
+var getLang = getParameterByName('lang');
+</script>
+</head>
+<body>
+<div id="player"></div>
+<script>
+document.write('<iframe id="iframe" allow="encrypted-media" width="100%" height="100%" scrolling="no" frameBorder="0" allowfullscreen></iframe>');
+
+if (getURL == "RVNQTkhE" || getURL == "Rm94X1Nwb3J0c19QcmVtaXVuX0hE" || getURL == "VE5UX1Nwb3J0c19IRA" || getURL == "VlRWX1BsdXNfSEQ" || getURL == "VHlDU3BvcnQ" || getURL == "Rm94U3BvcnRz" || getURL == "Rm94U3BvcnRzMkhE" || getURL == "Rm94U3BvcnRzM0hE" || getURL == "RVNQTjJIRA" || getURL == "RVNQTjJfQXJn")
+{
+	$.getJSON("https://directory.cookieyes.com/api/v1/ip", function (response) {
+		if (response.country != "AR" && response.country != "UY" && response.country != "PY")
+		{
+			if (getURL == "RVNQTkhE")
+			{
+				document.getElementById('iframe').src = 'https://tvfutbol.info/player/3/110';
+			}
+			else if (getURL == "Rm94X1Nwb3J0c19QcmVtaXVuX0hE")
+			{
+				document.getElementById('iframe').src = 'https://tucanaldeportivo.com/espnpremium-sd.php';
+			}
+			else if (getURL == "VE5UX1Nwb3J0c19IRA")
+			{
+				document.getElementById('iframe').src = 'https://tucanaldeportivo.com/tntsports.php';
+			}
+			else if (getURL == "VlRWX1BsdXNfSEQ")
+			{
+				document.getElementById('iframe').src = 'https://tvfutbol.info/player/3/119';
+			}
+			else if (getURL == "VHlDU3BvcnQ")
+			{
+				document.getElementById('iframe').src = 'https://tucanaldeportivo.com/tycsports.php';
+			}
+			else if (getURL == "RVNQTjJIRA")
+			{
+				document.getElementById('iframe').src = 'https://tucanaldeportivo.com/espnhd.php';
+			}
+			else if (getURL == "RVNQTjJfQXJn")
+			{
+				document.getElementById('iframe').src = 'https://tucanaldeportivo.com/espn2hd.php';
+			}
+			else if (getURL == "Rm94U3BvcnRz")
+			{
+				document.getElementById('iframe').src = 'https://dlhd.sx/embed/stream-787.php';
+			}
+			else if (getURL == "Rm94U3BvcnRzMkhE")
+			{
+				document.getElementById('iframe').src = 'https://dlhd.sx/embed/stream-788.php';
+			}
+			else if (getURL == "Rm94U3BvcnRzM0hE")
+			{
+				document.getElementById('iframe').src = 'https://dlhd.sx/embed/stream-789.php';
+			}
+		}
+		else
+		{
+			if (getLang)
+				lang = "&lang="+getLang;
+			else
+				lang = "";
+
+			var url = "";
+
+			var xhttp = new XMLHttpRequest();
+			xhttp.open("GET", "https://librefutboltv.net/json/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
+			xhttp.send();
+			xhttp.onreadystatechange = function() {
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+						var data = JSON.parse(xhttp.responseText);
+						url = data["url"];
+
+						document.getElementById('iframe').src = "//" +url + "/cvatt.html?get="+getURL+lang;
+				}
+			}
+		}
+	});
+}
+else
+{
+	if (getLang)
+		lang = "&lang="+getLang;
+	else
+		lang = "";
+
+	var url = "";
+
+	var xhttp = new XMLHttpRequest();
+	xhttp.open("GET", "https://librefutboltv.net/json/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
+	xhttp.send();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+				var data = JSON.parse(xhttp.responseText);
+				url = data["url"];
+
+				document.getElementById('iframe').src = "//" +url + "/cvatt.html?get="+getURL+lang;
+		}
+	}
+}
+</script>
+</body>
